@@ -142,3 +142,5 @@ git clone https://aria-nf:$token@github.com/aria-nf/aria-nf.github.io.git
   git commit -am update
   git push
   ```
+
+- tinggal setting _config.yml nya deh
