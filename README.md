@@ -121,12 +121,24 @@ docker run -p 4000:4000 chirpy
 ![alt text](images/README/image.png)
 
 ## setup to github
+clone repo
+```bash
+token="token_github_personal_access"
+git clone https://aria-nf:$token@github.com/aria-nf/aria-nf.github.io.git
+# git remote set-url origin https://aria-nf:$token@github.com/aria-nf/aria-nf.github.io.git
+```
+
 - enable github pages, menggunakan source github actions
   ![alt text](images/README/image-1.png)
 - configure jekyll, config.yml dan commit
+- jika error berarti perlu custom dulu manifest.yml di .github/workflows
+- karena di templatenya ada banyak jadi kita coba ubah jadi bak dulu aja biar gak aktif
+  ![alt text](images/README/image.png)
+- setelah itu tambahkan file jekyll.yml di .github/workflows dan tambahkan file dari raw ini [jekyll.yml](https://raw.githubusercontent.com/aria-nf/aria-nf.github.io/refs/heads/master/.github/workflows/jekyll.yml)
 
-```bash
-token=""
-git remote set-url origin https://aria-nf:$token@github.com/aria-nf/aria-nf.github.io.git
-
-```
+- lakukan commit dan push
+  ```bash
+  git add .
+  git commit -am update
+  git push
+  ```
